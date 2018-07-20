@@ -1,0 +1,23 @@
+[alias]
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  st = status
+  st = status
+  co = checkout
+  br = branch
+	rb = branch -D
+
+[user]
+	name = Fabian Müller
+	email = fmueller83@googlemail.com
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[push]
+	default = current
+
+[pull]
+	default = current
