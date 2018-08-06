@@ -1,23 +1,23 @@
 [alias]
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-  st = status
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  up = pull --rebase --autostash --all
   st = status
   co = checkout
   br = branch
-	rb = branch -D
+  rb = branch -D
 
 [user]
-	name = Fabian Müller
-	email = fmueller83@googlemail.com
+  name = Fabian Müller
+  email = fmueller83@googlemail.com
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [push]
-	default = current
+  default = current
 
 [pull]
-	default = current
+  default = current
